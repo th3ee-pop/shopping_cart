@@ -1,0 +1,42 @@
+.shoes-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.shoes-card {
+  background-image: url('../../assets/shoes/aj11_concord.jpeg');
+  background-size: 100%;
+  width: 25%;
+  height: 300px;
+  margin: 20px;
+}
+
+.shoes-detail {
+  text-align: right;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.shoes-detail:hover {
+  opacity: 1;
+}
+
+.shoes-card:hover {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.4);
+}
+
+.cart-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+@keyframes display-slowly {
+  form {
+    opacity: 0;
+  } to {
+  opacity: 1;
+  }
+}

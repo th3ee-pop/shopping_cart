@@ -1,0 +1,11 @@
+@keyframes amFadeIn {
+  from {opacity: 0.1}
+  to {opacity: 1}
+}
+
+@keyframes amZoomIn {
+  from {height: 0}
+  to {height: 100%}
+}
+
+

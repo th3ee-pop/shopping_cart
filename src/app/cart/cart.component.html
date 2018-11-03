@@ -1,0 +1,28 @@
+<div class="cart-page">
+  <mat-list role="list">
+    <mat-list-item  class="cart-item" role="listitem" *ngFor="let item of emitService.shoesArray">
+      <div class="item-info" [matTooltip]="item.description">
+        <h4>{{item.name}}</h4>
+      </div>
+      <div class="item-operation" style="display: flex">
+        <button  mat-button (click)="addIntoCart(item)">
+          <mat-icon>add</mat-icon>
+        </button>
+        <h4 class="item-num">{{item.num}}</h4>
+        <button  mat-button (click)="removeFromCart(item)">
+          <mat-icon>remove</mat-icon>
+        </button>
+        <h4 class="item-price-sum">
+          {{item.num * stringToInt(item.price)}}
+        </h4>
+      </div>
+    </mat-list-item>
+  </mat-list>
+  <div class="total-price">
+    <h3>
+      Total: {{sum}}
+    </h3>
+  </div>
+</div>
+
+

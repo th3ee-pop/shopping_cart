@@ -1,0 +1,11 @@
+<div class="shoes-page">
+    <mat-card *ngFor="let shoes of shoes_list" class="shoes-card" [ngStyle]="{'background-image': 'url(' + shoes.url + ')'}">
+      {{shoes.name}}
+      <div class="shoes-detail">{{shoes.description}}
+        <button mat-button mat-raised-button (click)="addIntoCart(shoes)">加入购物车+</button>
+      </div>
+    </mat-card>
+</div>
+<button class="cart-button" mat-raised-button mat-mini-fab [matBadge]="emitService.shoesArray.length" (click)="goToCart()">
+  <mat-icon>add_shopping_cart</mat-icon>
+</button>
